@@ -21,7 +21,7 @@ cd web2app
 makepkg -si
 ```
 
-### 2. AUR Helper (if published to AUR)
+### 2. AUR Helper (Not aviable)
 ```bash
 yay -S web2app
 ```
@@ -32,7 +32,7 @@ yay -S web2app
 - `bash`
 - `xdg-utils`
 - `desktop-file-utils`
-- `google-chrome` **or** `chromium`
+- `chromium`
 
 ---
 
