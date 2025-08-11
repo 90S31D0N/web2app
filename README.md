@@ -55,7 +55,7 @@ The `.desktop` file will be saved to your local applications folder so it appear
 ## Removal
 If you want to remove an app created with Web2App, run:
 ```bash
-/usr/share/web2app/remove.sh
+web2app -R
 ```
 and follow the instructions.
 
@@ -67,4 +67,4 @@ Specify your license here.
 ---
 
 ## Author
-Maintained by: **Your Name**
+Maintained by: *90S31D0N**
