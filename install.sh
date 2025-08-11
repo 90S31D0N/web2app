@@ -85,6 +85,7 @@ echo "App Name: $APP_NAME"
 echo "App URL: $APP_URL"
 echo "Icon URL: $ICON_URL"
 
+SAFE_APP_ID="$(echo "$APP_NAME" | tr '[:space:]' '-' | tr -cd '[:alnum:]-_.' )"
 ICON_DIR="$HOME/.local/share/applications/icons"
 DESKTOP_FILE="$HOME/.local/share/applications/${APP_NAME}.desktop"
 ICON_PATH="${ICON_DIR}/${APP_NAME}.png"
@@ -108,7 +109,7 @@ cat > "$DESKTOP_FILE" <<EOF
 Version=1.0
 Name=$APP_NAME
 Comment=$APP_NAME
-Exec=chromium --new-window --ozone-platform=wayland --app="$APP_URL" --name="$APP_NAME" --class="$APP_NAME"
+Exec=chromium --new-window --ozone-platform=wayland --app="$APP_URL" --name="$SAFE_APP_ID" --class="$SAFE_APP_ID"
 Terminal=false
 Type=Application
 Icon=$ICON_PATH
@@ -117,7 +118,7 @@ Categories=Network;WebBrowser;
 EOF
 
 chmod +x "$DESKTOP_FILE"
-
+ 
 
 # Optionally update desktop database (if available)
 if command -v update-desktop-database >/dev/null 2>&1; then

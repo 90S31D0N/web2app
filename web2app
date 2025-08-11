@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ "$1" == "-R" ]]; then
+    "$SCRIPT_DIR/remove.sh"
+else
+    "$SCRIPT_DIR/install.sh"
+fi
