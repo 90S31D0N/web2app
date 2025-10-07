@@ -1,6 +1,6 @@
 # Maintainer: Your Name <you@example.com>
 pkgname=web2app
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Simple TUI to convert web applications into desktop apps"
 arch=('any')
